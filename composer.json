@@ -1,11 +1,11 @@
 {
-  "name": "double-break/spapi-php",
+  "name": "webaune/spapi-php",
   "description": "Amazon Selling Partner API Client",
   "type": "library",
   "authors": [
      {
-         "name": "Lyubo Slavilov",
-         "email": "lyubo.slavilov@gmail.com"
+         "name": "Razeek",
+         "email": "razeek@civa.tech"
      }
   ],
   "require": {
