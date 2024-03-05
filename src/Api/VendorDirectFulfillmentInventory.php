@@ -9,8 +9,8 @@
 * Selling Partner API for Direct Fulfillment Inventory Updates
 * The Selling Partner API for Direct Fulfillment Inventory Updates provides programmatic access to a direct fulfillment vendor's inventory updates.
 */
-namespace DoubleBreak\Spapi\Api;
-use DoubleBreak\Spapi\Client;
+namespace Webaune\Spapi\Api;
+use Webaune\Spapi\Client;
 
 class VendorDirectFulfillmentInventory extends Client {
 

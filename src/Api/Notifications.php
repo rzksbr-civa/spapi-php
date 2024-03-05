@@ -11,8 +11,8 @@
 
 For more information, see the [Notifications Use Case Guide](https://github.com/amzn/selling-partner-api-docs/blob/main/guides/en-US/use-case-guides/notifications-api-use-case-guide/notifications-use-case-guide-v1.md)
 */
-namespace DoubleBreak\Spapi\Api;
-use DoubleBreak\Spapi\Client;
+namespace Webaune\Spapi\Api;
+use Webaune\Spapi\Client;
 
 class Notifications extends Client {
 

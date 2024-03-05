@@ -9,8 +9,8 @@
 * Selling Partner API for Retail Procurement Transaction Status
 * The Selling Partner API for Retail Procurement Transaction Status provides programmatic access to status information on specific asynchronous POST transactions for vendors.
 */
-namespace DoubleBreak\Spapi\Api;
-use DoubleBreak\Spapi\Client;
+namespace Webaune\Spapi\Api;
+use Webaune\Spapi\Client;
 
 class VendorTransactionStatus extends Client {
 

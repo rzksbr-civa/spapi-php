@@ -16,6 +16,6 @@
     "guzzlehttp/psr7": "^2.4"
   },
   "autoload": {
-    "psr-4": { "DoubleBreak\\Spapi\\" : "src/" }
+    "psr-4": { "Webaune\\Spapi\\" : "src/" }
   }
 }

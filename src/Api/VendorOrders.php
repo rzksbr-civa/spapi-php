@@ -9,8 +9,8 @@
 * Selling Partner API for Retail Procurement Orders
 * The Selling Partner API for Retail Procurement Orders provides programmatic access to vendor orders data.
 */
-namespace DoubleBreak\Spapi\Api;
-use DoubleBreak\Spapi\Client;
+namespace Webaune\Spapi\Api;
+use Webaune\Spapi\Client;
 
 class VendorOrders extends Client {
 

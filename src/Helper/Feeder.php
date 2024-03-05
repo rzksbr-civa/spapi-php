@@ -4,10 +4,10 @@
  *  @email: sikandartariq25@gmail.com
  */
 
-namespace DoubleBreak\Spapi\Helper;
+namespace Webaune\Spapi\Helper;
 
 
-use DoubleBreak\Spapi\ASECryptoStream;
+use Webaune\Spapi\ASECryptoStream;
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Request;
 

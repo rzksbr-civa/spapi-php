@@ -9,8 +9,8 @@
 * Selling Partner API for Direct Fulfillment Orders
 * The Selling Partner API for Direct Fulfillment Orders provides programmatic access to a direct fulfillment vendor's order data.
 */
-namespace DoubleBreak\Spapi\Api;
-use DoubleBreak\Spapi\Client;
+namespace Webaune\Spapi\Api;
+use Webaune\Spapi\Client;
 
 class VendorDirectFulfillmentOrders extends Client {
 

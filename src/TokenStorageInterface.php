@@ -1,5 +1,5 @@
 <?php
-namespace DoubleBreak\Spapi;
+namespace Webaune\Spapi;
 
 interface TokenStorageInterface {
   public function getToken($key): ?array;

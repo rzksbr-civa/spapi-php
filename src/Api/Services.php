@@ -9,8 +9,8 @@
 * Selling Partner API for Services
 * With the Services API, you can build applications that help service providers get and modify their service orders.
 */
-namespace DoubleBreak\Spapi\Api;
-use DoubleBreak\Spapi\Client;
+namespace Webaune\Spapi\Api;
+use Webaune\Spapi\Client;
 
 class Services extends Client {
 

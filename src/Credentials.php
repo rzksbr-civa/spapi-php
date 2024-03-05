@@ -1,6 +1,6 @@
 <?php
 
-namespace DoubleBreak\Spapi;
+namespace Webaune\Spapi;
 
 use GuzzleHttp\Client;
 
@@ -69,7 +69,7 @@ class Credentials
       }
 
       $cred = $this->getCredentials();
-      $tokensClient = new \DoubleBreak\Spapi\Api\Tokens($cred, $this->config);
+      $tokensClient = new \Webaune\Spapi\Api\Tokens($cred, $this->config);
 
       $result = $tokensClient->createRestrictedDataToken($restrictedOperations);
       $rdt = $result['restrictedDataToken'];

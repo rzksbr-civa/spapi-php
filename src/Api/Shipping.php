@@ -9,8 +9,8 @@
 * Selling Partner API for Shipping
 * Provides programmatic access to Amazon Shipping APIs.
 */
-namespace DoubleBreak\Spapi\Api;
-use DoubleBreak\Spapi\Client;
+namespace Webaune\Spapi\Api;
+use Webaune\Spapi\Client;
 
 class Shipping extends Client {
 

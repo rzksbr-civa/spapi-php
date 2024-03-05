@@ -1,5 +1,5 @@
 <?php
-namespace DoubleBreak\Spapi;
+namespace Webaune\Spapi;
 
 trait HttpClientFactoryTrait {
   private function createHttpClient($config)

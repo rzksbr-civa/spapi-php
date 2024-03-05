@@ -1,5 +1,5 @@
 <?php
-namespace DoubleBreak\Spapi;
+namespace Webaune\Spapi;
 use GuzzleHttp\Psr7\Request;
 
 class Signer {

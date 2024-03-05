@@ -9,8 +9,8 @@
 * Selling Partner API for Sales
 * The Selling Partner API for Sales provides APIs related to sales performance.
 */
-namespace DoubleBreak\Spapi\Api;
-use DoubleBreak\Spapi\Client;
+namespace Webaune\Spapi\Api;
+use Webaune\Spapi\Client;
 
 class Sales extends Client {
 

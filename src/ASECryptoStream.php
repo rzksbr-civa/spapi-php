@@ -4,7 +4,7 @@
  *  @email: julian.tietz@gidutex.de
  */
 
-namespace DoubleBreak\Spapi;
+namespace Webaune\Spapi;
 
 
 class ASECryptoStream

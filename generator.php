@@ -151,8 +151,8 @@ class SpapiGenerator {
     $header .= $this->line($idn, "* {$this->swaggerSpec['info']['description']}");
     $header .= $this->line($idn, "*/");
 
-    $header .= $this->line($idn, "namespace DoubleBreak\\Spapi\\Api;");
-    $header .= $this->line($idn, "use DoubleBreak\\Spapi\\Client;");
+    $header .= $this->line($idn, "namespace Webaune\\Spapi\\Api;");
+    $header .= $this->line($idn, "use Webaune\\Spapi\\Client;");
     $header .= $this->line();
     $header .= $this->line($idn, "class {$this->className} extends Client {");
 

@@ -1,6 +1,6 @@
 <?php
-namespace DoubleBreak\Spapi;
-use DoubleBreak\Spapi\TokenStorageInterface;
+namespace Webaune\Spapi;
+use Webaune\Spapi\TokenStorageInterface;
 
 class SimpleTokenStorage implements TokenStorageInterface {
 

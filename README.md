@@ -88,16 +88,16 @@ composer update double-break/spapi-php
   ];
 
   //Create token storage which will store the temporary tokens
-  $tokenStorage = new DoubleBreak\Spapi\SimpleTokenStorage('./aws-tokens');
+  $tokenStorage = new Webaune\Spapi\SimpleTokenStorage('./aws-tokens');
 
   //Create the request signer which will be automatically used to sign all of the
   //requests to the API
-  $signer = new DoubleBreak\Spapi\Signer();
+  $signer = new Webaune\Spapi\Signer();
 
   //Create Credentials service and call getCredentials() to obtain
   //all the tokens needed under the hood
 
-  $credentials = new DoubleBreak\Spapi\Credentials($tokenStorage, $signer, $config);
+  $credentials = new Webaune\Spapi\Credentials($tokenStorage, $signer, $config);
   $cred = $credentials->getCredentials();
 
 
@@ -106,7 +106,7 @@ composer update double-break/spapi-php
 
 
   //Create SP API Catalog client and execute one ot its REST methods.
-  $catalogClient = new DoubleBreak\Spapi\Api\CatalogItems($cred, $config);
+  $catalogClient = new Webaune\Spapi\Api\CatalogItems($cred, $config);
 
   //Check the catalog info for B074Z9QH5F ASIN
   $result = $catalogClient->getCatalogItem('B074Z9QH5F', [
@@ -130,13 +130,13 @@ And in this guide for step 2. Encrypt and upload the feed data: user can use bel
 $contentType = 'text/xml; charset=UTF-8';
 
 // create feed document
-$feedClient = new \DoubleBreak\Spapi\Api\Feeds($cred, $config);
+$feedClient = new \Webaune\Spapi\Api\Feeds($cred, $config);
 $response = $feedClient->createFeedDocument(["contentType" => $contentType]);
 $payload = $response['payload'];
 
 $feedContentFilePath = './testFeedDoc.xml';
 
-$result = (new \DoubleBreak\Spapi\Helper\Feeder())->uploadFeedDocument($payload,$contentType,$feedContentFilePath);
+$result = (new \Webaune\Spapi\Helper\Feeder())->uploadFeedDocument($payload,$contentType,$feedContentFilePath);
 print_r($result);
 ```
 
@@ -144,14 +144,14 @@ And for Step 6. Download and decrypt the feed processing report: user can use be
 
 ```php
 <?php
-$feedClient = new \DoubleBreak\Spapi\Api\Feeds($cred, $config);
+$feedClient = new \Webaune\Spapi\Api\Feeds($cred, $config);
 
 // $resultFeedDocumentId: from response of getFeed() function.
 $resultFeedDocumentId = 'amzn1.tortuga.3.ed4cd0d8-447b-4c22-96b5-52da8ace1207.T3YUVYPGKE9BMY';
 $response = $feedClient->getFeedDocument($resultFeedDocumentId);
 $payload = $response['payload'];
 
-$result = (new \DoubleBreak\Spapi\Helper\Feeder())->downloadFeedProcessingReport($payload);
+$result = (new \Webaune\Spapi\Helper\Feeder())->downloadFeedProcessingReport($payload);
 print_r($result);
 ```
 
@@ -161,7 +161,7 @@ print_r($result);
 <?php
   //configuration and initialization here
 
-  $catalogClinet = new DoubleBreak\Spapi\Api\Catalog($cred, $config);
+  $catalogClinet = new Webaune\Spapi\Api\Catalog($cred, $config);
   try {
     $result = $catalogClinet->getCatalogItem('B074Z9QH5F', [
       'MarketplaceId' => 'A1PA6795UKMFR9',
@@ -187,7 +187,7 @@ print_r($result);
   //configuration and initialization here
 
   //Create SP API Catalog client and execute one ot its REST methds.
-  $catalogClinet = new DoubleBreak\Spapi\Api\Catalog($cred, $config);
+  $catalogClinet = new Webaune\Spapi\Api\Catalog($cred, $config);
 
   //Check the catalog info for B074Z9QH5F ASIN
   $result = $catalogClinet->getCatalogItem('B074Z9QH5F', [
@@ -208,7 +208,7 @@ print_r($result);
 <?php
   //configuration and initialization here
 
-  $catalogClinet = new DoubleBreak\Spapi\Api\Catalog($cred, $config);
+  $catalogClinet = new Webaune\Spapi\Api\Catalog($cred, $config);
   try {
     $result = $catalogClinet->getCatalogItem('B074Z9QH5F', [
       'MarketplaceId' => 'A1PA6795UKMFR9',
@@ -268,22 +268,22 @@ $config = [
 ];
 
 //Create token storage which will store the temporary tokens
-$tokenStorage = new DoubleBreak\Spapi\SimpleTokenStorage('./aws-tokens');
+$tokenStorage = new Webaune\Spapi\SimpleTokenStorage('./aws-tokens');
 
 //Create the request signer which will be automatically used to sign all of the
 //requests to the API
-$signer = new DoubleBreak\Spapi\Signer();
+$signer = new Webaune\Spapi\Signer();
 
 //Create Credentials service and call getCredentials() to obtain
 //all the tokens needed under the hood
-$credentials = new DoubleBreak\Spapi\Credentials($tokenStorage, $signer, $config);
+$credentials = new Webaune\Spapi\Credentials($tokenStorage, $signer, $config);
 //get credentials with migration token, it's needed for /authorization/v1/authorizationCode request
 $cred = $credentials->getCredentials(true);
 
 /** The application logic implementation **/
 
 //Create SP API Catalog client and execute one ot its REST methods.
-$authorizationClient = new DoubleBreak\Spapi\Api\Authorization($cred, $config);
+$authorizationClient = new Webaune\Spapi\Api\Authorization($cred, $config);
 
 //Get Authorization code
 $result = $authorizationClient->getAuthorizationCode([
@@ -330,22 +330,22 @@ $config = [
 ];
 
 //Create token storage which will store the temporary tokens
-$tokenStorage = new DoubleBreak\Spapi\SimpleTokenStorage('./aws-tokens');
+$tokenStorage = new Webaune\Spapi\SimpleTokenStorage('./aws-tokens');
 
 //Create the request signer which will be automatically used to sign all of the
 //requests to the API
-$signer = new DoubleBreak\Spapi\Signer();
+$signer = new Webaune\Spapi\Signer();
 
 //Create Credentials service and call getCredentials() to obtain
 //all the tokens needed under the hood
-$credentials = new DoubleBreak\Spapi\Credentials($tokenStorage, $signer, $config);
+$credentials = new Webaune\Spapi\Credentials($tokenStorage, $signer, $config);
 //get credentials with Grantless auth token, it's needed for grantless operations request
 $cred = $credentials->getCredentials('grantless');
 
 /** The application logic implementation **/
 
 //Create SP API Notification client and execute one ot its REST methods.
-$notificationClient = new DoubleBreak\Spapi\Api\Notifications($cred, $config);
+$notificationClient = new Webaune\Spapi\Api\Notifications($cred, $config);
 
 //Get notification destinations
 $result = $notificationClient->getDestinations();
@@ -366,16 +366,16 @@ print_r($result['payload']);
   ];
 
   //Create token storage which will store the temporary tokens
-  $tokenStorage = new DoubleBreak\Spapi\SimpleTokenStorage('./aws-tokens');
+  $tokenStorage = new Webaune\Spapi\SimpleTokenStorage('./aws-tokens');
 
   //Create the request signer which will be automatically used to sign all of the
   //requests to the API
-  $signer = new DoubleBreak\Spapi\Signer();
+  $signer = new Webaune\Spapi\Signer();
 
   //Create Credentials service and call getCredentials() to obtain
   //all the tokens needed under the hood
 
-  $credentials = new DoubleBreak\Spapi\Credentials($tokenStorage, $signer, $config);
+  $credentials = new Webaune\Spapi\Credentials($tokenStorage, $signer, $config);
   $cred = $credentials->getRdtCredentials([
     'restrictedResources' => [
       [
@@ -395,7 +395,7 @@ print_r($result['payload']);
 
 
   //Create SP API Orders client and execute one ot its REST methods.
-  $orderClient = new DoubleBreak\Spapi\Api\Orders($cred, $config);
+  $orderClient = new Webaune\Spapi\Api\Orders($cred, $config);
 
   //Get order's buyer info
   $result = $catalogClient->getOrderBuyerInfo('902-3159896-1390916')['payload'];
